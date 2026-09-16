@@ -4,5 +4,5 @@ nixPkgs = ["python312", "python312Packages.pip", "chromium"]
 [phases.install]
 cmds = [
   "pip install --break-system-packages -r requirements.txt",
-  "playwright install --with-deps chromium"
+  "python3 -m playwright install --with-deps chromium"
 ]
