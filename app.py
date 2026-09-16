@@ -46,8 +46,8 @@ cipher = Fernet(_fk.encode() if isinstance(_fk, str) else _fk)
 # ── Proxy config (IPRoyal) ────────────────────────────────────
 PROXY_HOST = os.environ.get("IPROYAL_HOST", "geo.iproyal.com")
 PROXY_PORT = os.environ.get("IPROYAL_PORT", "12321")
-PROXY_USER = os.environ.get("IPROYAL_USER", "")
-PROXY_PASS = os.environ.get("IPROYAL_PASS", "")
+PROXY_USER = os.environ.get("IPROYAL_USER", "PwWM1JFbPPP3oMOu")
+PROXY_PASS = os.environ.get("IPROYAL_PASS", "mnGUfFPFq21Tj7na")
 
 
 # ── Models ────────────────────────────────────────────────────
@@ -64,7 +64,7 @@ class User(db.Model):
 
 
 with app.app_context():
-    db.create_all()
+    db.create_all(checkfirst=True)
 
 
 # ── Helpers ───────────────────────────────────────────────────
