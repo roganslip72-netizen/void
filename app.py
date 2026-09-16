@@ -82,7 +82,11 @@ class User(db.Model):
 
 
 with app.app_context():
-    db.create_all(checkfirst=True)
+    try:
+        db.create_all()
+    except Exception:
+        pass
+
 
 
 # ── Helpers ───────────────────────────────────────────────────
