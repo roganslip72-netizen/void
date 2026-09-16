@@ -80,7 +80,7 @@ def current_user():
 def get_proxy(proxy_session_id):
     if not PROXY_USER or not PROXY_PASS:
         return None
-    user_str = f"{PROXY_USER}_session-{proxy_session_id}_lifetime-7d"
+    user_str = PROXY_USER
     url = f"http://{user_str}:{PROXY_PASS}@{PROXY_HOST}:{PROXY_PORT}"
     return {"http": url, "https": url}
 
