@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["...", "chromium"]
+nixPkgs = ["python312", "python312Packages.pip", "chromium"]
 
 [phases.install]
 cmds = [
